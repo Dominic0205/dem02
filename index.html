@@ -1,1 +1,30 @@
-hi
+<!DOCTYPE html>
+<html >
+<head>
+    <title>Celsius to Fahrenheit</title>
+    <link rel="stylesheet" href="conversion.css">
+</head>
+<body>
+    <center>
+        <div class="box">
+            <h2>Celsius to Fahrenheit</h2>
+            <form>
+                <input type="text" placeholder="Enter Celsius" id="celsius">
+                <button type="button" onclick="con()">convert</button>
+                <div id="result">
+
+                </div>
+            </form>
+        </div>
+    </center>
+<script>
+    function con()
+    {
+    let c = Number(document.getElementById("celsius").value);
+    let f = 9/5 * c + 32;
+    let result=document.getElementById("result");
+    result.innerHTML = f.toFixed(2);
+    }
+</script>
+</body>
+</html>
